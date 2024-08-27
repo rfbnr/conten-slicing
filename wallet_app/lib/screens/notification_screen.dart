@@ -8,15 +8,17 @@ class NotificationScreen extends StatelessWidget {
     return const SingleChildScrollView(
       child: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 22.0),
+          padding: EdgeInsets.symmetric(
+            horizontal: 22,
+          ),
           child: Column(
             children: [
               SizedBox(height: 10),
               Text(
-                "Notifications",
+                "Notification",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -34,23 +36,23 @@ class NotificationScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   NotificationItem(
-                    title: 'Transaction Debit',
-                    message: 'You spent Rp 5.000.000 from John Doe',
-                    time: '1 hours ago',
+                    title: "Transaction Debit",
+                    message: "You reveice Rp 5.000.000 from John Doe",
+                    time: "1 hour ago",
                     isSpend: true,
                   ),
                   SizedBox(height: 16),
                   NotificationItem(
-                    title: 'Transaction Debit',
-                    message: 'You received Rp 8.000.000 from John Doe',
-                    time: '4 hours ago',
+                    title: "Transaction Debit",
+                    message: "You receive Rp 8.000.000 from John Doe",
+                    time: "4 hours ago",
                     isSpend: false,
                   ),
                   SizedBox(height: 16),
                   NotificationItem(
-                    title: 'Transaction Debit',
-                    message: 'You spent Rp 3.000.000 from John Doe',
-                    time: '7 hours ago',
+                    title: "Transaction Debit",
+                    message: "You spent Rp 3.000.000 from John Doe",
+                    time: "7 hours ago",
                     isSpend: true,
                   ),
                 ],
@@ -58,6 +60,7 @@ class NotificationScreen extends StatelessWidget {
               SizedBox(height: 30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     "Yesterday",
@@ -68,24 +71,24 @@ class NotificationScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   NotificationItem(
-                    title: 'Transaction Debit',
-                    message: 'You received Rp 9.000.000 from John Doe',
-                    time: '29/06/2024\n14:00:20',
-                    isSpend: false,
-                  ),
-                  SizedBox(height: 16),
-                  NotificationItem(
-                    title: 'Transaction Debit',
-                    message: 'You spent Rp 2.000.000 from John Doe',
-                    time: '29/06/2024\n19:15:20',
+                    title: "Transaction Debit",
+                    message: "You reveived Rp 9.000.000 from John Doe",
+                    time: "29/06/2024\n14:00:20",
                     isSpend: true,
                   ),
                   SizedBox(height: 16),
                   NotificationItem(
-                    title: 'Transaction Debit',
-                    message: 'You received Rp 5.000.000 from John Doe',
-                    time: '29/06/2024\n21:30:00',
+                    title: "Transaction Debit",
+                    message: "You spent Rp 2.000.000 from John Doe",
+                    time: "29/06/2024\n19:15:20",
                     isSpend: false,
+                  ),
+                  SizedBox(height: 16),
+                  NotificationItem(
+                    title: "Transaction Debit",
+                    message: "You reveived Rp 5.000.000 from John Doe",
+                    time: "29/06/2024\n21:30:00",
+                    isSpend: true,
                   ),
                 ],
               ),
@@ -123,7 +126,7 @@ class NotificationItem extends StatelessWidget {
             blurRadius: 40,
             spreadRadius: 10,
             color: Colors.grey.withOpacity(0.3),
-          ),
+          )
         ],
       ),
       child: ListTile(
@@ -156,8 +159,8 @@ class NotificationItem extends StatelessWidget {
           time,
           textAlign: TextAlign.right,
           style: const TextStyle(
-            color: Colors.grey,
             fontSize: 12,
+            color: Colors.grey,
           ),
         ),
       ),

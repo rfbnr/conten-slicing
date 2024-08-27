@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wallet_app/screens/home_screen.dart';
 
 import '../constants/colors.dart';
+import 'home_screen.dart';
 import 'notification_screen.dart';
+import 'profile_screen.dart';
 import 'transaction_screen.dart';
 
 class MainMenuScreen extends StatefulWidget {
@@ -37,9 +38,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
       case 2:
         return const NotificationScreen();
       case 3:
-        return const Center(
-          child: Text("SETTING"),
-        );
+        return const ProfileScreen();
 
       default:
         const HomeScreen();
@@ -86,7 +85,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
             ),
             _buildNavigationItem(
               index: 3,
-              icon: Icons.settings,
+              icon: Icons.person,
             ),
           ],
         ),
